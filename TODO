@@ -1,0 +1,17 @@
+Fix this warning (in /var/log/ondemand-nginx/admin/error.log):
+
+[ N 2022-05-24 04:36:36.1998 166/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 166
+App 230 output:  [passenger_native_support.so] not found for current Ruby interpreter.
+App 230 output:      This library provides various optimized routines that make
+App 230 output:      Phusion Passenger(R) faster. Please run 'sudo yum install passenger-devel-6.0.14'
+App 230 output:      so that Phusion Passenger(R) can compile one on the next run.
+App 230 output:  [passenger_native_support.so] finding downloads for the current Ruby interpreter...
+App 230 output:      (set PASSENGER_DOWNLOAD_NATIVE_SUPPORT_BINARY=0 to disable)
+App 230 output:      Could not download https://github.com/phusion/passenger/releases/download/release-6.0.14/rubyext-ruby-2.7.0-x86_64-linux.tar.gz: 2022-05-24 04:36:37 ERROR 404: Not Found.
+App 230 output:      Trying next mirror...
+App 230 output:      Could not download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/6.0.14/rubyext-ruby-2.7.0-x86_64-linux.tar.gz: 2022-05-24 04:36:38 ERROR 404: Not Found.
+App 230 output:      Trying next mirror...
+App 230 output:      Could not download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/6.0.14/rubyext-ruby-2.7.0-x86_64-linux.tar.gz: 2022-05-24 04:36:38 ERROR 403: Forbidden.
+App 230 output:  [passenger_native_support.so] will not be used (can't compile or download)
+App 230 output:   --> Passenger will still operate normally.
+

@@ -1,0 +1,33 @@
+# /etc/ood/config/clusters.d/cluster.yml
+---
+v2:
+  metadata:
+    title: "cluster"
+  login:
+    host: "slurmmaster"
+    default: true
+  job:
+    adapter: "slurm"
+    #cluster: "cluster"
+    bin: "/usr/bin/"
+    conf: "/etc/slurm-llnl/slurm.conf"
+    #    bin_overrides:
+    #  sbatch: "/opt/slurm/wrappers/sbatch_wrapper"
+    #  squeue: "/opt/slurm/wrappers/squeue_wrapper"
+    #  scontrol: "/opt/slurm/wrappers/scontrol_wrapper"
+    #  scancel: "/opt/slurm/wrappers/scancel_wrapper"
+    #
+  batch_connect:
+    basic:
+      script_wrapper: |
+        module purge
+        %s
+      set_host: "host=$(hostname -A | awk '{print $1}')"
+    vnc:
+      script_wrapper: |
+        module purge
+        export PATH="/opt/TurboVNC/bin/:$PATH"
+        export WEBSOCKIFY_CMD="/usr/local/websockify/run"
+        %s
+      set_host: "host=$(hostname -A | awk '{print $1}')"
+
