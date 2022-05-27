@@ -46,6 +46,9 @@ RUN chgrp www-data /etc/shadow
 
 # allow admin to develop apps
 
+RUN mkdir -p /user_apps
+
+
 RUN mkdir -p /var/www/ood/apps/dev/admin
 WORKDIR  /var/www/ood/apps/dev/admin
 RUN mkdir -p /home/admin/ondemand/dev && chown admin:www-data /home/admin/ondemand/dev
@@ -63,7 +66,7 @@ RUN mkdir -p /etc/ood/config/apps/shell/
 COPY shell/env /etc/ood/config/apps/shell/
 COPY shell/ssh_wrapper /usr/bin/
 
-
+RUN ln -s /usr/bin/python3 /usr/bin/python
 
 
 ###

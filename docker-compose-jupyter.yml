@@ -14,6 +14,7 @@ services:
         hostname: slurmmaster
         user: admin
         volumes:
+                - ./apps:/user_apps/admin
                 - shared-vol:/home/admin
                 - ./certs:/etc/pki/tls/
                 # - ./ood-config:/etc/ood/config:ro
@@ -24,29 +25,32 @@ services:
                 - 80:80
                 - 443:443
   slurmnode1:
-        #image: slurm-node:19.05.5-1
+        image: slurm-node:19.05.5-1
         build: ./node
         hostname: slurmnode1
         user: admin
         volumes:
+                - ./apps:/user_apps/admin
                 - shared-vol:/home/admin
         links:
                 - slurmmaster
   slurmnode2:
-        #image: slurm-node:19.05.5-1
-        build: ./node
+        image: slurm-node:19.05.5-1
+        # build: ./node
         hostname: slurmnode2
         user: admin
         volumes:
+                - ./apps:/user_apps/admin
                 - shared-vol:/home/admin
         links:
                 - slurmmaster
   slurmnode3:
-        #image: slurm-node:19.05.5-1
-        build: ./node
+        image: slurm-node:19.05.5-1
+        # build: ./node
         hostname: slurmnode3
         user: admin
         volumes:
+                - ./apps:/user_apps/admin
                 - shared-vol:/home/admin
         links:
                 - slurmmaster

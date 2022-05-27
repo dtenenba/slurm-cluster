@@ -15,3 +15,9 @@ App 230 output:      Could not download https://s3.amazonaws.com/phusion-passeng
 App 230 output:  [passenger_native_support.so] will not be used (can't compile or download)
 App 230 output:   --> Passenger will still operate normally.
 
+- See if we can mount a directory on the host into
+  /home/admin/ondemand/dev on master and compute nodes,
+  keeping in mind that /home/admin is already mounted
+  to a data volume.
+
+- Can Singularity run within Docker? Find out....  
