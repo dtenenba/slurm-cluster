@@ -1,0 +1,6 @@
+type: warning
+msg: |
+  <% if Time.now < Time.new(2022, 9, 24, 12, 0, 0) %>
+  There will be *downtime* at some old time for some reason.
+  But this message will **disappear** after that time. 
+  <% end %>

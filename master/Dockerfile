@@ -68,6 +68,10 @@ COPY shell/ssh_wrapper /usr/bin/
 
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
+# mail
+
+RUN apt-get install -y mailutils ssmtp
+ADD ssmtp.conf /etc/ssmtp/
 
 ###
 

@@ -19,11 +19,13 @@ v2:
     #
   batch_connect:
     basic:
+      header: "#SBATCH --mail-user=$USER@fhcrc.org"
       script_wrapper: |
         module purge
         %s
       set_host: "host=$(hostname -A | awk '{print $1}')"
     vnc:
+      header: "#SBATCH --mail-user=$USER@fhcrc.org"
       script_wrapper: |
         module purge
         export PATH="/opt/TurboVNC/bin/:$PATH"

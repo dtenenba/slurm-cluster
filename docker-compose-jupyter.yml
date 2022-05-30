@@ -17,6 +17,8 @@ services:
                 - ./apps:/user_apps/admin
                 - shared-vol:/home/admin
                 - ./certs:/etc/pki/tls/
+                - ./master/announcement.yml://etc/ood/config/announcement.yml
+                - ./master/announcements.d:/etc/ood/config/announcements.d
                 # - ./ood-config:/etc/ood/config:ro
         ports:
                 - 6817:6817
@@ -25,6 +27,7 @@ services:
                 - 80:80
                 - 443:443
   slurmnode1:
+        privileged: true
         image: slurm-node:19.05.5-1
         build: ./node
         hostname: slurmnode1
@@ -35,6 +38,7 @@ services:
         links:
                 - slurmmaster
   slurmnode2:
+        privileged: true
         image: slurm-node:19.05.5-1
         # build: ./node
         hostname: slurmnode2
@@ -45,6 +49,7 @@ services:
         links:
                 - slurmmaster
   slurmnode3:
+        privileged: true
         image: slurm-node:19.05.5-1
         # build: ./node
         hostname: slurmnode3

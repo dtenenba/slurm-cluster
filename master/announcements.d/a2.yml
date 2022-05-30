@@ -1,0 +1,6 @@
+type: success
+msg: |
+  ### Announcement 2
+  This message is processed by Ruby's template engine so you
+  can compute stuff. For example, you could put info about
+  cluster usage in here.

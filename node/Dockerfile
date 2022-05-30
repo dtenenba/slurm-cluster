@@ -85,7 +85,7 @@ RUN echo 'export PATH=$PATH:/usr/lib/rstudio-server/bin' |tee -a /etc/profile > 
 
 RUN apt-get install -y proot # needed for RStudio Server
 
-RUN apt-get install -y nginx
+# RUN apt-get install -y nginx
 
 
 # Anaconda
@@ -113,6 +113,16 @@ RUN mkdir /usr/local/cromwell
 RUN mv *.jar /usr/local/cromwell/
 
 RUN ln -s /usr/bin/python3 /usr/bin/python
+
+## mail
+
+RUN apt-get install -y mailutils ssmtp
+ADD ssmtp.conf /etc/ssmtp/
+
+
+###
+
+COPY openresty-with-session.sif /apps/
 
 ###
 

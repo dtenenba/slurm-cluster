@@ -1,3 +1,5 @@
 venv3.9
 docker-compose.yml
 certs/
+*.sif
+node/*.sif
