@@ -17,7 +17,7 @@ services:
                 - ./apps:/user_apps/admin
                 - shared-vol:/home/admin
                 - ./certs:/etc/pki/tls/
-                - ./master/announcement.yml://etc/ood/config/announcement.yml
+                - ./master/announcement.yml:/etc/ood/config/announcement.yml
                 - ./master/announcements.d:/etc/ood/config/announcements.d
                 # - ./ood-config:/etc/ood/config:ro
         ports:

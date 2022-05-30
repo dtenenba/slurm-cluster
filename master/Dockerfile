@@ -59,7 +59,9 @@ WORKDIR /home/admin
 
 COPY ood-config/ood_portal.yml /etc/ood/config/
 COPY ood-config/clusters.d/cluster.yml /etc/ood/config/clusters.d/
-
+COPY ood-config/nginx_stage.yml /etc/ood/config/
+RUN mkdir -p /etc/ood/config/apps/dashboard/
+COPY ood-config/env /etc/ood/config/apps/dashboard/
 # set up shell command
 
 RUN mkdir -p /etc/ood/config/apps/shell/
