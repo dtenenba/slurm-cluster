@@ -1,0 +1,8 @@
+OOD_DASHBOARD_SUPPORT_URL=https://centernet.fredhutch.org/cn/u/center-it/scicomp.html
+OOD_DASHBOARD_SUPPORT_EMAIL=scicomp@fredhutch.org
+OOD_DASHBOARD_DOCS_URL=https://www.osc.edu/ondemand
+OOD_DASHBOARD_DEV_DOCS_URL=https://osc.github.io/ood-documentation/master/app-development.html
+OOD_DASHBOARD_HELP_CUSTOM_URL=https://sciwiki.fredhutch.org/
+OOD_BRAND_BG_COLOR=#123054
+OOD_BRAND_LINK_ACTIVE_BG_COLOR=#89c348
+OOD_DASHBOARD_HEADER_IMG_LOGO=/public/logo.png
