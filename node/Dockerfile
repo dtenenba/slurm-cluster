@@ -120,10 +120,16 @@ RUN apt-get install -y mailutils ssmtp
 ADD ssmtp.conf /etc/ssmtp/
 
 
+### mate
+
+RUN apt-get install -y mate-desktop-environment ack
+
 ###
 
 COPY openresty-with-session.sif /apps/
 
 ###
+
+
 
 ENTRYPOINT ["/etc/slurm-llnl/docker-entrypoint.sh"]

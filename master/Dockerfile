@@ -62,6 +62,9 @@ COPY ood-config/clusters.d/cluster.yml /etc/ood/config/clusters.d/
 COPY ood-config/nginx_stage.yml /etc/ood/config/
 RUN mkdir -p /etc/ood/config/apps/dashboard/
 COPY ood-config/env /etc/ood/config/apps/dashboard/
+COPY ood-config/logo.png /var/www/ood/public/
+RUN mkdir -p /etc/ood/config/apps/bc_desktop/
+COPY desktop/cluster.yml /etc/ood/config/apps/bc_desktop/
 # set up shell command
 
 RUN mkdir -p /etc/ood/config/apps/shell/
@@ -72,8 +75,9 @@ RUN ln -s /usr/bin/python3 /usr/bin/python
 
 # mail
 
-RUN apt-get install -y mailutils ssmtp
+RUN apt-get install -y mailutils ssmtp ack
 ADD ssmtp.conf /etc/ssmtp/
+
 
 ###
 

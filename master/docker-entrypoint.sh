@@ -12,7 +12,8 @@ sudo service slurmctld start
 # sudo ln -s /user_apps/admin /home/admin/ondemand/dev
 
 git -C ~/ondemand/dev clone https://github.com/dtenenba/bc_osc_example_shiny.git || true
-git -C ~/ondemand/dev clone https://github.com/dtenenba/bc_osc_rstudio_server.git || true
+git -C ~/ondemand/dev clone https://github.com/dtenenba/bc_rcc_rstudio_server.git || true
+git -C ~/ondemand/dev/bc_rcc_rstudio_server checkout rstudio-1.4-updates || true
 git -C ~/ondemand/dev clone https://github.com/dtenenba/bc_example_jupyter.git || true
 git -C ~/ondemand/dev clone https://github.com/dtenenba/flask_passenger_wsgi_hello.git || true
 git -C ~/ondemand/dev clone https://github.com/dtenenba/bc_example_flaskapp.git || true

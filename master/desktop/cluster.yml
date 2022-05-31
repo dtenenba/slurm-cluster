@@ -1,0 +1,4 @@
+# /etc/ood/config/apps/bc_desktop/cluster.yml
+---
+title: "Cluster Desktop"
+cluster: "cluster"
