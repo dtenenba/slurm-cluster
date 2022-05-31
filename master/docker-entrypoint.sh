@@ -19,7 +19,7 @@ git -C ~/ondemand/dev clone https://github.com/dtenenba/flask_passenger_wsgi_hel
 git -C ~/ondemand/dev clone https://github.com/dtenenba/bc_example_flaskapp.git || true
 
 git -C ~/ondemand/dev/bc_osc_example_shiny pull || true
-git -C ~/ondemand/dev/bc_osc_rstudio_server pull || true
+git -C ~/ondemand/dev/bc_rcc_rstudio_server pull || true
 git -C ~/ondemand/dev/bc_example_jupyter pull || true
 git -C ~/ondemand/dev/flask_passenger_wsgi_hello pull || true
 git -C ~/ondemand/dev/bc_example_flaskapp pull || true
